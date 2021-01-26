@@ -156,18 +156,24 @@ var (
 	// LocalConfig is the config that should be used to generate a local
 	// genesis.
 	LocalConfig Config
+
+	// StatalancheConfig is the config that should be used to generate the Statalanche
+	// genesis
+	StatalancheConfig Config
 )
 
 func init() {
 	unparsedMainnetConfig := UnparsedConfig{}
 	unparsedFujiConfig := UnparsedConfig{}
 	unparsedLocalConfig := UnparsedConfig{}
+	unparsedStatalancheConfig := UnparsedConfig{}
 
 	errs := wrappers.Errs{}
 	errs.Add(
 		json.Unmarshal([]byte(mainnetGenesisConfigJSON), &unparsedMainnetConfig),
 		json.Unmarshal([]byte(fujiGenesisConfigJSON), &unparsedFujiConfig),
 		json.Unmarshal([]byte(localGenesisConfigJSON), &unparsedLocalConfig),
+		json.Unmarshal([]byte(statalancheGenesisConfigJSON), &unparsedStatalancheConfig),
 	)
 	if errs.Errored() {
 		panic(errs.Err)
@@ -185,6 +191,10 @@ func init() {
 	errs.Add(err)
 	LocalConfig = localConfig
 
+	statalancheConfig, err := unparsedStatalancheConfig.Parse()
+	errs.Add(err)
+	StatalancheConfig = statalancheConfig
+
 	if errs.Errored() {
 		panic(errs.Err)
 	}
@@ -199,6 +209,8 @@ func GetConfig(networkID uint32) *Config {
 		return &FujiConfig
 	case constants.LocalID:
 		return &LocalConfig
+	case constants.StatalancheID:
+		return &StatalancheConfig
 	default:
 		tempConfig := LocalConfig
 		tempConfig.NetworkID = networkID

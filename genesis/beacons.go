@@ -119,6 +119,14 @@ func getNodeIDs(networkID uint32) []string {
 			"NodeID-JjvzhxnLHLUQ5HjVRkvG827ivbLXPwA9u",
 			"NodeID-4CWTbdvgXHY1CLXqQNAp22nJDo5nAmts6",
 		}
+	case constants.StatalancheID:
+		return []string{
+			"NodeID-E349V27puxyemQTc6QDDGaLD1kEF1GJfa",
+			"NodeID-Pvfe5vYMUMecgXWcbtmSjqVxcisQJuHty",
+			"NodeID-PCe2PQb5wwXT7JUsFQjrqb8bVhRinnKoW",
+			"NodeID-MAgi5KLrdqjoPFMHEySNcFS8Ax7EsLB1f",
+			"NodeID-DjkQepxbpuVM9yZrYmekhKkKwSeQa3MR",
+		}
 	default:
 		return nil
 	}
