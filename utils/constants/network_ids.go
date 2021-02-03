@@ -41,7 +41,7 @@ const (
 	DenaliHRP      = "denali"
 	EverestHRP     = "everest"
 	FujiHRP        = "fuji"
-	StatalancheHRP = "statalanche"
+	StatalancheHRP = MainnetHRP
 	UnitTestHRP    = "testing"
 	LocalHRP       = "local"
 	FallbackHRP    = "custom"
@@ -80,7 +80,7 @@ var (
 		DenaliID:      DenaliHRP,
 		EverestID:     EverestHRP,
 		FujiID:        FujiHRP,
-		StatalancheID: StatalancheHRP,
+		StatalancheID: MainnetHRP,
 		UnitTestID:    UnitTestHRP,
 		LocalID:       LocalHRP,
 	}

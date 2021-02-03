@@ -14,18 +14,18 @@ var (
 		"networkID": 115110116,
 		"allocations": [
 			{
-				"avaxAddr": "X-avax1ue6kq32j382vxp2gq8exzztyn2mg6htg9l4kgk",
+				"avaxAddr": "X-statalanche15faat649drfma0x5v3jrglswjyt0d043echgy8",
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
 				"initialAmount": 10000000000000000,
 				"unlockSchedule": [
 					{
-						"amount": 10000000000000000
+						"amount": 100000000000000000
 					}
 				]
 			},
 			{
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
-				"avaxAddr": "X-avax1ng093n7uceg5g8lmp450kwy64j9newc5m0yjun",
+				"avaxAddr": "X-statalanche1v2j6lcmqlrqanpks6x54pptpyaqgdkcd6gkewv",
 				"initialAmount": 300000000000000000,
 				"unlockSchedule": [
 					{
@@ -35,7 +35,7 @@ var (
 			},
 			{
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
-				"avaxAddr": "X-avax1xfwyt3hwn8xllgm5uw03cymk9sxuxpdpw3y48e",
+				"avaxAddr": "X-statalanche1xwhych03n8h3hmtcxqvkz9l2uaaa3dw20zpc9r",
 				"initialAmount": 10000000000000000,
 				"unlockSchedule": [
 					{
@@ -45,7 +45,7 @@ var (
 			},
 			{
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
-				"avaxAddr": "X-avax1texzpd6ea9x4al2aavrdkyjlwt99pjfsfjtxal",
+				"avaxAddr": "X-statalanche1t3vej6wn3v9jn8f9ke0z2vjsa38heqxhwlfqsj",
 				"initialAmount": 10000000000000000,
 				"unlockSchedule": [
 					{
@@ -55,7 +55,7 @@ var (
 			},
 			{
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
-				"avaxAddr": "X-avax1sd0tw9d3wx5xu4vk7r2qqtwc7lyzkw35mwzmvm",
+				"avaxAddr": "X-statalanche1vw8w9lxp3t3dz92vm9rvutqwk0zcvsx7jnxvdq",
 				"initialAmount": 10000000000000000,
 				"unlockSchedule": [
 					{
@@ -68,36 +68,36 @@ var (
 		"initialStakeDuration": 31536000,
 		"initialStakeDurationOffset": 5400,
 		"initialStakedFunds": [
-			"X-avax1ue6kq32j382vxp2gq8exzztyn2mg6htg9l4kgk",
-			"X-avax1ng093n7uceg5g8lmp450kwy64j9newc5m0yjun",
-			"X-avax1xfwyt3hwn8xllgm5uw03cymk9sxuxpdpw3y48e",
-			"X-avax1texzpd6ea9x4al2aavrdkyjlwt99pjfsfjtxal",
-			"X-avax1sd0tw9d3wx5xu4vk7r2qqtwc7lyzkw35mwzmvm"
+			"X-statalanche15faat649drfma0x5v3jrglswjyt0d043echgy8",
+			"X-statalanche1v2j6lcmqlrqanpks6x54pptpyaqgdkcd6gkewv",
+			"X-statalanche1xwhych03n8h3hmtcxqvkz9l2uaaa3dw20zpc9r",
+			"X-statalanche1t3vej6wn3v9jn8f9ke0z2vjsa38heqxhwlfqsj",
+			"X-statalanche1vw8w9lxp3t3dz92vm9rvutqwk0zcvsx7jnxvdq"
 		],
 		"initialStakers": [
 			{
 				"nodeID": "NodeID-E349V27puxyemQTc6QDDGaLD1kEF1GJfa",
-				"rewardAddress": "X-avax1ue6kq32j382vxp2gq8exzztyn2mg6htg9l4kgk",
+				"rewardAddress": "X-statalanche15faat649drfma0x5v3jrglswjyt0d043echgy8",
 				"delegationFee": 200000
 			},
 			{
 				"nodeID": "NodeID-Pvfe5vYMUMecgXWcbtmSjqVxcisQJuHty",
-				"rewardAddress": "X-avax1ng093n7uceg5g8lmp450kwy64j9newc5m0yjun",
+				"rewardAddress": "X-statalanche1v2j6lcmqlrqanpks6x54pptpyaqgdkcd6gkewv",
 				"delegationFee": 200000
 			},
 			{
 				"nodeID": "NodeID-PCe2PQb5wwXT7JUsFQjrqb8bVhRinnKoW",
-				"rewardAddress": "X-avax1xfwyt3hwn8xllgm5uw03cymk9sxuxpdpw3y48e",
+				"rewardAddress": "X-statalanche1xwhych03n8h3hmtcxqvkz9l2uaaa3dw20zpc9r",
 				"delegationFee": 200000
 			},
 			{
 				"nodeID": "NodeID-MAgi5KLrdqjoPFMHEySNcFS8Ax7EsLB1f",
-				"rewardAddress": "X-avax1texzpd6ea9x4al2aavrdkyjlwt99pjfsfjtxal",
+				"rewardAddress": "X-statalanche1t3vej6wn3v9jn8f9ke0z2vjsa38heqxhwlfqsj",
 				"delegationFee": 200000
 			},
 			{
 				"nodeID": "NodeID-DjkQepxbpuVM9yZrYmekhKkKwSeQa3MR",
-				"rewardAddress": "X-avax1sd0tw9d3wx5xu4vk7r2qqtwc7lyzkw35mwzmvm",
+				"rewardAddress": "X-statalanche1vw8w9lxp3t3dz92vm9rvutqwk0zcvsx7jnxvdq",
 				"delegationFee": 200000
 			}
 		],
