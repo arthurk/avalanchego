@@ -128,8 +128,8 @@ func getNodeIDs(networkID uint32) []string {
 	case constants.StatalancheID:
 		return []string{
 			"NodeID-E349V27puxyemQTc6QDDGaLD1kEF1GJfa",
-			"NodeID-MAgi5KLrdqjoPFMHEySNcFS8Ax7EsLB1f",
-			"NodeID-DjkQepxbpuVM9yZrYmekhKkKwSeQa3MR",
+			"NodeID-Pvfe5vYMUMecgXWcbtmSjqVxcisQJuHty",
+			"NodeID-PCe2PQb5wwXT7JUsFQjrqb8bVhRinnKoW",
 		}
 	default:
 		return nil
