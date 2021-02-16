@@ -100,14 +100,14 @@ func avalancheFlagSet() *flag.FlagSet {
 	fs.Float64(uptimeRequirementKey, .6, "Fraction of time a validator must be online to receive rewards")
 
 	// Minimum stake, in nAVAX, required to validate the primary network
-	fs.Uint64(minValidatorStakeKey, 2*units.KiloAvax, "Minimum stake, in nAVAX, required to validate the primary network")
+	fs.Uint64(minValidatorStakeKey, 20*units.Avax, "Minimum stake, in nAVAX, required to validate the primary network")
 
 	// Maximum stake amount, in nAVAX, that can be staked and delegated to a
 	// validator on the primary network
 	fs.Uint64(maxValidatorStakeKey, 3*units.MegaAvax, "Maximum stake, in nAVAX, that can be placed on a validator on the primary network")
 
 	// Minimum stake, in nAVAX, that can be delegated on the primary network
-	fs.Uint64(minDelegatorStakeKey, 25*units.Avax, "Minimum stake, in nAVAX, that can be delegated on the primary network")
+	fs.Uint64(minDelegatorStakeKey, 2*units.Avax, "Minimum stake, in nAVAX, that can be delegated on the primary network")
 
 	fs.Uint64(minDelegatorFeeKey, 20000, "Minimum delegation fee, in the range [0, 1000000], that can be charged for delegation on the primary network")
 
@@ -152,7 +152,7 @@ func avalancheFlagSet() *flag.FlagSet {
 
 	// HTTP Server:
 	fs.String(httpHostKey, "127.0.0.1", "Address of the HTTP server")
-	fs.Uint(httpPortKey, 9650, "Port of the HTTP server")
+	fs.Uint(httpPortKey, 9655, "Port of the HTTP server")
 	fs.Bool(httpsEnabledKey, false, "Upgrade the HTTP server to HTTPs")
 	fs.String(httpsKeyFileKey, "", "TLS private key file for the HTTPs server")
 	fs.String(httpsCertFileKey, "", "TLS certificate file for the HTTPs server")
@@ -164,7 +164,7 @@ func avalancheFlagSet() *flag.FlagSet {
 	fs.String(bootstrapIDsKey, defaultString, "Comma separated list of bootstrap peer ids to connect to. Example: NodeID-JR4dVmy6ffUGAKCBDkyCbeZbyHQBeDsET,NodeID-8CrVPQZ4VSqgL8zTdvL14G8HqAfrBr4z")
 
 	// Staking:
-	fs.Uint(stakingPortKey, 9651, "Port of the consensus server")
+	fs.Uint(stakingPortKey, 9653, "Port of the consensus server")
 	fs.Bool(stakingEnabledKey, true, "Enable staking. If enabled, Network TLS is required.")
 	fs.Bool(p2pTLSEnabledKey, true, "Require TLS to authenticate network communication")
 	fs.String(stakingKeyPathKey, defaultString, "TLS private key for staking")

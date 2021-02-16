@@ -16,50 +16,50 @@ var (
 			{
 				"avaxAddr": "X-statalanche15faat649drfma0x5v3jrglswjyt0d043echgy8",
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
-				"initialAmount": 10000000000000000,
+				"initialAmount": 40000000000000000,
 				"unlockSchedule": [
 					{
-						"amount": 100000000000000000
+						"amount": 40000000000000000
 					}
 				]
 			},
 			{
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
 				"avaxAddr": "X-statalanche1v2j6lcmqlrqanpks6x54pptpyaqgdkcd6gkewv",
-				"initialAmount": 300000000000000000,
+				"initialAmount": 40000000000000000,
 				"unlockSchedule": [
 					{
-						"amount": 10000000000000000
+						"amount": 40000000000000000
 					}
 				]
 			},
 			{
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
 				"avaxAddr": "X-statalanche1xwhych03n8h3hmtcxqvkz9l2uaaa3dw20zpc9r",
-				"initialAmount": 10000000000000000,
+				"initialAmount": 40000000000000000,
 				"unlockSchedule": [
 					{
-						"amount": 10000000000000000
+						"amount": 40000000000000000
 					}
 				]
 			},
 			{
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
 				"avaxAddr": "X-statalanche1t3vej6wn3v9jn8f9ke0z2vjsa38heqxhwlfqsj",
-				"initialAmount": 10000000000000000,
+				"initialAmount": 15000000000000000,
 				"unlockSchedule": [
 					{
-						"amount": 10000000000000000
+						"amount": 15000000000000000
 					}
 				]
 			},
 			{
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
 				"avaxAddr": "X-statalanche1vw8w9lxp3t3dz92vm9rvutqwk0zcvsx7jnxvdq",
-				"initialAmount": 10000000000000000,
+				"initialAmount": 15000000000000000,
 				"unlockSchedule": [
 					{
-						"amount": 10000000000000000
+						"amount": 15000000000000000
 					}
 				]
 			}
