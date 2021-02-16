@@ -46,22 +46,12 @@ var (
 			{
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
 				"avaxAddr": "X-statalanche1t3vej6wn3v9jn8f9ke0z2vjsa38heqxhwlfqsj",
-				"initialAmount": 15000000000000000,
-				"unlockSchedule": [
-					{
-						"amount": 15000000000000000
-					}
-				]
+				"initialAmount": 40000000000000000
 			},
 			{
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
 				"avaxAddr": "X-statalanche1vw8w9lxp3t3dz92vm9rvutqwk0zcvsx7jnxvdq",
-				"initialAmount": 15000000000000000,
-				"unlockSchedule": [
-					{
-						"amount": 15000000000000000
-					}
-				]
+				"initialAmount": 40000000000000000
 			}
 		],
 		"startTime": 1599696000,
@@ -70,9 +60,7 @@ var (
 		"initialStakedFunds": [
 			"X-statalanche15faat649drfma0x5v3jrglswjyt0d043echgy8",
 			"X-statalanche1v2j6lcmqlrqanpks6x54pptpyaqgdkcd6gkewv",
-			"X-statalanche1xwhych03n8h3hmtcxqvkz9l2uaaa3dw20zpc9r",
-			"X-statalanche1t3vej6wn3v9jn8f9ke0z2vjsa38heqxhwlfqsj",
-			"X-statalanche1vw8w9lxp3t3dz92vm9rvutqwk0zcvsx7jnxvdq"
+			"X-statalanche1xwhych03n8h3hmtcxqvkz9l2uaaa3dw20zpc9r"
 		],
 		"initialStakers": [
 			{
@@ -88,16 +76,6 @@ var (
 			{
 				"nodeID": "NodeID-PCe2PQb5wwXT7JUsFQjrqb8bVhRinnKoW",
 				"rewardAddress": "X-statalanche1xwhych03n8h3hmtcxqvkz9l2uaaa3dw20zpc9r",
-				"delegationFee": 200000
-			},
-			{
-				"nodeID": "NodeID-MAgi5KLrdqjoPFMHEySNcFS8Ax7EsLB1f",
-				"rewardAddress": "X-statalanche1t3vej6wn3v9jn8f9ke0z2vjsa38heqxhwlfqsj",
-				"delegationFee": 200000
-			},
-			{
-				"nodeID": "NodeID-DjkQepxbpuVM9yZrYmekhKkKwSeQa3MR",
-				"rewardAddress": "X-statalanche1vw8w9lxp3t3dz92vm9rvutqwk0zcvsx7jnxvdq",
 				"delegationFee": 200000
 			}
 		],
