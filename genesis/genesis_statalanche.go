@@ -46,12 +46,12 @@ var (
 			{
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
 				"avaxAddr": "X-statalanche1t3vej6wn3v9jn8f9ke0z2vjsa38heqxhwlfqsj",
-				"initialAmount": 40000000000000000
+				"initialAmount": 100000000000000000
 			},
 			{
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
 				"avaxAddr": "X-statalanche1vw8w9lxp3t3dz92vm9rvutqwk0zcvsx7jnxvdq",
-				"initialAmount": 40000000000000000
+				"initialAmount": 100000000000000000
 			}
 		],
 		"startTime": 1599696000,
