@@ -289,6 +289,7 @@ func (b *beaconManager) Connected(vdrID ids.ShortID) {
 		return
 	}
 	weight, err := math.Add64(weight, b.weight)
+	fmt.Println(weight)
 	if err != nil {
 		b.timer.Cancel()
 		b.Router.Connected(vdrID)
