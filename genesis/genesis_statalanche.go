@@ -54,7 +54,7 @@ var (
 				"initialAmount": 100000000000000000
 			}
 		],
-		"startTime": 1599696000,
+		"startTime": 1613590094,
 		"initialStakeDuration": 31536000,
 		"initialStakeDurationOffset": 5400,
 		"initialStakedFunds": [
