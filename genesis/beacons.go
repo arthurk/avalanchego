@@ -63,7 +63,6 @@ func getIPs(networkID uint32) []string {
 		}
 	case constants.StatalancheID:
 		return []string{
-			"188.166.203.71:9653",
 			"161.35.247.229:9653",
 			"161.35.247.230:9653",
 		}

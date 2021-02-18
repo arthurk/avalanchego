@@ -54,6 +54,7 @@ import (
 	"github.com/ava-labs/avalanchego/vms/rpcchainvm"
 	"github.com/ava-labs/avalanchego/vms/secp256k1fx"
 	"github.com/ava-labs/avalanchego/vms/timestampvm"
+	"github.com/davecgh/go-spew/spew"
 
 	ipcsapi "github.com/ava-labs/avalanchego/api/ipcs"
 )
@@ -290,6 +291,7 @@ func (b *beaconManager) Connected(vdrID ids.ShortID) {
 	}
 	weight, err := math.Add64(weight, b.weight)
 	fmt.Println(weight, b.requiredWeight)
+	spew.Dump(b.beacons)
 	if err != nil {
 		b.timer.Cancel()
 		b.Router.Connected(vdrID)
@@ -343,6 +345,7 @@ func (n *Node) Dispatch() error {
 
 	// Add bootstrap nodes to the peer network
 	for _, peer := range n.Config.BootstrapPeers {
+		spew.Dump(peer)
 		if !peer.IP.Equal(n.Config.StakingIP.IP()) {
 			n.Net.Track(peer.IP)
 		} else {
