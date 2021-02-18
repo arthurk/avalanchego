@@ -15,6 +15,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/davecgh/go-spew/spew"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 
@@ -664,6 +665,7 @@ func setNodeConfig(v *viper.Viper) error {
 		Config.EpochDuration = v.GetDuration(snowEpochDuration)
 	} else {
 		Config.Params = *genesis.GetParams(networkID)
+		spew.Dump(Config.Params)
 	}
 
 	// Load genesis data
@@ -671,7 +673,7 @@ func setNodeConfig(v *viper.Viper) error {
 	if err != nil {
 		return fmt.Errorf("unable to load genesis file: %w", err)
 	}
-
+	spew.Dump(Config.NetworkID)
 	// Assertions
 	Config.EnableAssertions = v.GetBool(assertionsEnabledKey)
 

@@ -72,6 +72,7 @@ func validateInitialStakedFunds(config *Config) error {
 			)
 		}
 		initialStakedFundsSet.Add(staker)
+		fmt.Println("Initial Staker Fund Set addition: ", staker)
 
 		if !allocationSet.Contains(staker) {
 			avaxAddr, err := formatting.FormatAddress(

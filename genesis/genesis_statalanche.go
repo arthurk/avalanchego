@@ -19,7 +19,7 @@ var (
 				"initialAmount": 0,
 				"unlockSchedule": [
 					{
-						"amount": 40000000000000000
+						"amount": 400000000000000
 					}
 				]
 			},
