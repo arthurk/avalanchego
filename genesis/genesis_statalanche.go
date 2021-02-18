@@ -16,7 +16,7 @@ var (
 			{
 				"avaxAddr": "X-statalanche15faat649drfma0x5v3jrglswjyt0d043echgy8",
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
-				"initialAmount": 40000000000000000,
+				"initialAmount": 0,
 				"unlockSchedule": [
 					{
 						"amount": 40000000000000000
@@ -27,40 +27,32 @@ var (
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
 				"avaxAddr": "X-statalanche1v2j6lcmqlrqanpks6x54pptpyaqgdkcd6gkewv",
 				"initialAmount": 40000000000000000,
-				"unlockSchedule": [
-					{
-						"amount": 40000000000000000
-					}
-				]
+				"unlockSchedule": []
 			},
 			{
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
 				"avaxAddr": "X-statalanche1xwhych03n8h3hmtcxqvkz9l2uaaa3dw20zpc9r",
 				"initialAmount": 40000000000000000,
-				"unlockSchedule": [
-					{
-						"amount": 40000000000000000
-					}
-				]
+				"unlockSchedule": []
 			},
 			{
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
 				"avaxAddr": "X-statalanche1t3vej6wn3v9jn8f9ke0z2vjsa38heqxhwlfqsj",
-				"initialAmount": 100000000000000000
+				"initialAmount": 100000000000000000,
+				"unlockSchedule": []
 			},
 			{
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
 				"avaxAddr": "X-statalanche1vw8w9lxp3t3dz92vm9rvutqwk0zcvsx7jnxvdq",
-				"initialAmount": 100000000000000000
+				"initialAmount": 100000000000000000,
+				"unlockSchedule": []
 			}
 		],
 		"startTime": 1613590094,
 		"initialStakeDuration": 31536000,
 		"initialStakeDurationOffset": 5400,
 		"initialStakedFunds": [
-			"X-statalanche15faat649drfma0x5v3jrglswjyt0d043echgy8",
-			"X-statalanche1v2j6lcmqlrqanpks6x54pptpyaqgdkcd6gkewv",
-			"X-statalanche1xwhych03n8h3hmtcxqvkz9l2uaaa3dw20zpc9r"
+			"X-statalanche15faat649drfma0x5v3jrglswjyt0d043echgy8"
 		],
 		"initialStakers": [
 			{
@@ -70,12 +62,12 @@ var (
 			},
 			{
 				"nodeID": "NodeID-Pvfe5vYMUMecgXWcbtmSjqVxcisQJuHty",
-				"rewardAddress": "X-statalanche1v2j6lcmqlrqanpks6x54pptpyaqgdkcd6gkewv",
+				"rewardAddress": "X-statalanche15faat649drfma0x5v3jrglswjyt0d043echgy8",
 				"delegationFee": 200000
 			},
 			{
 				"nodeID": "NodeID-PCe2PQb5wwXT7JUsFQjrqb8bVhRinnKoW",
-				"rewardAddress": "X-statalanche1xwhych03n8h3hmtcxqvkz9l2uaaa3dw20zpc9r",
+				"rewardAddress": "X-statalanche15faat649drfma0x5v3jrglswjyt0d043echgy8",
 				"delegationFee": 200000
 			}
 		],

@@ -116,6 +116,7 @@ func (c Config) Unparse() (UnparsedConfig, error) {
 			return uc, err
 		}
 		uc.InitialStakedFunds[i] = avaxAddr
+		fmt.Println(avaxAddr)
 	}
 	for i, is := range c.InitialStakers {
 		uis, err := is.Unparse(c.NetworkID)
