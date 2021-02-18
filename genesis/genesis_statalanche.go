@@ -14,8 +14,8 @@ var (
 		"networkID": 115110116,
 		"allocations": [
 			{
-				"avaxAddr": "X-statalanche15faat649drfma0x5v3jrglswjyt0d043echgy8",
 				"ethAddr": "0xe027688a57c4A6Fb2708343cF330aaeB8fe594bb",
+				"avaxAddr": "X-statalanche15faat649drfma0x5v3jrglswjyt0d043echgy8",
 				"initialAmount": 0,
 				"unlockSchedule": [
 					{
@@ -50,7 +50,7 @@ var (
 		],
 		"startTime": 1613590094,
 		"initialStakeDuration": 31536000,
-		"initialStakeDurationOffset": 5400,
+		"initialStakeDurationOffset": 54000,
 		"initialStakedFunds": [
 			"X-statalanche15faat649drfma0x5v3jrglswjyt0d043echgy8"
 		],
@@ -87,8 +87,8 @@ var (
 		MinStakeDuration:     24 * time.Hour,
 		MaxStakeDuration:     365 * 24 * time.Hour,
 		StakeMintingPeriod:   365 * 24 * time.Hour,
-		EpochFirstTransition: time.Unix(1607626800, 0),
+		EpochFirstTransition: time.Unix(1613848877, 0),
 		EpochDuration:        30 * time.Minute,
-		ApricotPhase0Time:    time.Date(2020, 12, 5, 5, 00, 0, 0, time.UTC),
+		ApricotPhase0Time:    time.Date(2021, 2, 15, 5, 00, 0, 0, time.UTC),
 	}
 )
