@@ -61,11 +61,6 @@ func getIPs(networkID uint32) []string {
 			"3.12.197.248:21001",
 			"3.17.39.236:21001",
 		}
-	case constants.StatalancheID:
-		return []string{
-			"161.35.247.229:9653",
-			"161.35.247.230:9653",
-		}
 	default:
 		return nil
 	}
@@ -123,12 +118,6 @@ func getNodeIDs(networkID uint32) []string {
 			"NodeID-84KbQHSDnojroCVY7vQ7u9Tx7pUonPaS",
 			"NodeID-JjvzhxnLHLUQ5HjVRkvG827ivbLXPwA9u",
 			"NodeID-4CWTbdvgXHY1CLXqQNAp22nJDo5nAmts6",
-		}
-	case constants.StatalancheID:
-		return []string{
-			"NodeID-E349V27puxyemQTc6QDDGaLD1kEF1GJfa",
-			"NodeID-Pvfe5vYMUMecgXWcbtmSjqVxcisQJuHty",
-			"NodeID-PCe2PQb5wwXT7JUsFQjrqb8bVhRinnKoW",
 		}
 	default:
 		return nil
