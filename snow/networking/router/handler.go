@@ -8,18 +8,18 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ava-labs/avalanchego/utils"
+	"github.com/corpetty/avalanchego/utils"
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/avalanchego/snow/networking/tracker"
-	"github.com/ava-labs/avalanchego/snow/validators"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/timer"
-	"github.com/ava-labs/avalanchego/utils/uptime"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow"
+	"github.com/corpetty/avalanchego/snow/engine/common"
+	"github.com/corpetty/avalanchego/snow/networking/tracker"
+	"github.com/corpetty/avalanchego/snow/validators"
+	"github.com/corpetty/avalanchego/utils/constants"
+	"github.com/corpetty/avalanchego/utils/timer"
+	"github.com/corpetty/avalanchego/utils/uptime"
 )
 
 // Requirement: A set of nodes spamming messages (potentially costly) shouldn't

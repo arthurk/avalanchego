@@ -6,9 +6,9 @@ package missing
 import (
 	"testing"
 
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/corpetty/avalanchego/ids"
 
-	"github.com/ava-labs/avalanchego/snow/choices"
+	"github.com/corpetty/avalanchego/snow/choices"
 )
 
 func TestMissingBlock(t *testing.T) {

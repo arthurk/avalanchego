@@ -7,11 +7,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ava-labs/avalanchego/codec/linearcodec"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/crypto"
-	"github.com/ava-labs/avalanchego/utils/formatting"
-	"github.com/ava-labs/avalanchego/utils/logging"
+	"github.com/corpetty/avalanchego/codec/linearcodec"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/utils/crypto"
+	"github.com/corpetty/avalanchego/utils/formatting"
+	"github.com/corpetty/avalanchego/utils/logging"
 )
 
 var (

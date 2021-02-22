@@ -9,14 +9,14 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/snow/events"
-	"github.com/ava-labs/avalanchego/utils/formatting"
-	"github.com/ava-labs/avalanchego/utils/wrappers"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow"
+	"github.com/corpetty/avalanchego/snow/choices"
+	"github.com/corpetty/avalanchego/snow/events"
+	"github.com/corpetty/avalanchego/utils/formatting"
+	"github.com/corpetty/avalanchego/utils/wrappers"
 
-	sbcon "github.com/ava-labs/avalanchego/snow/consensus/snowball"
+	sbcon "github.com/corpetty/avalanchego/snow/consensus/snowball"
 )
 
 type common struct {

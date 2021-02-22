@@ -6,11 +6,11 @@ package snowstorm
 import (
 	"math"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/choices"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow"
+	"github.com/corpetty/avalanchego/snow/choices"
 
-	sbcon "github.com/ava-labs/avalanchego/snow/consensus/snowball"
+	sbcon "github.com/corpetty/avalanchego/snow/consensus/snowball"
 )
 
 // InputFactory implements Factory by returning an input struct

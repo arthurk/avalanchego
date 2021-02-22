@@ -4,9 +4,9 @@
 package snowman
 
 import (
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/consensus/snowball"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow"
+	"github.com/corpetty/avalanchego/snow/consensus/snowball"
 )
 
 // Consensus represents a general snowman instance that can be used directly to

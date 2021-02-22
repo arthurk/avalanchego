@@ -7,10 +7,10 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/ava-labs/avalanchego/database/memdb"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/engine/common"
+	"github.com/corpetty/avalanchego/database/memdb"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow"
+	"github.com/corpetty/avalanchego/snow/engine/common"
 )
 
 var blockchainID = ids.ID{1, 2, 3}

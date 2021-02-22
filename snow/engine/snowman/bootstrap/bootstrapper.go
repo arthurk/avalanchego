@@ -8,14 +8,14 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/snow/consensus/snowman"
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/avalanchego/snow/engine/common/queue"
-	"github.com/ava-labs/avalanchego/snow/engine/snowman/block"
-	"github.com/ava-labs/avalanchego/snow/validators"
-	"github.com/ava-labs/avalanchego/utils/formatting"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow/choices"
+	"github.com/corpetty/avalanchego/snow/consensus/snowman"
+	"github.com/corpetty/avalanchego/snow/engine/common"
+	"github.com/corpetty/avalanchego/snow/engine/common/queue"
+	"github.com/corpetty/avalanchego/snow/engine/snowman/block"
+	"github.com/corpetty/avalanchego/snow/validators"
+	"github.com/corpetty/avalanchego/utils/formatting"
 )
 
 // Config ...

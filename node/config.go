@@ -6,17 +6,17 @@ package node
 import (
 	"time"
 
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/genesis"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/nat"
-	"github.com/ava-labs/avalanchego/snow/consensus/avalanche"
-	"github.com/ava-labs/avalanchego/snow/networking/benchlist"
-	"github.com/ava-labs/avalanchego/snow/networking/router"
-	"github.com/ava-labs/avalanchego/utils"
-	"github.com/ava-labs/avalanchego/utils/dynamicip"
-	"github.com/ava-labs/avalanchego/utils/logging"
-	"github.com/ava-labs/avalanchego/utils/timer"
+	"github.com/corpetty/avalanchego/database"
+	"github.com/corpetty/avalanchego/genesis"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/nat"
+	"github.com/corpetty/avalanchego/snow/consensus/avalanche"
+	"github.com/corpetty/avalanchego/snow/networking/benchlist"
+	"github.com/corpetty/avalanchego/snow/networking/router"
+	"github.com/corpetty/avalanchego/utils"
+	"github.com/corpetty/avalanchego/utils/dynamicip"
+	"github.com/corpetty/avalanchego/utils/logging"
+	"github.com/corpetty/avalanchego/utils/timer"
 )
 
 // Config contains all of the configurations of an Avalanche node.

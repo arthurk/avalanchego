@@ -4,14 +4,14 @@
 package state
 
 import (
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/snow/engine/avalanche/vertex"
-	"github.com/ava-labs/avalanchego/utils/formatting"
-	"github.com/ava-labs/avalanchego/utils/hashing"
-	"github.com/ava-labs/avalanchego/utils/wrappers"
+	"github.com/corpetty/avalanchego/cache"
+	"github.com/corpetty/avalanchego/database"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow/choices"
+	"github.com/corpetty/avalanchego/snow/engine/avalanche/vertex"
+	"github.com/corpetty/avalanchego/utils/formatting"
+	"github.com/corpetty/avalanchego/utils/hashing"
+	"github.com/corpetty/avalanchego/utils/wrappers"
 )
 
 type state struct {

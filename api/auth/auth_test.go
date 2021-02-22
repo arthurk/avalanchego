@@ -13,7 +13,7 @@ import (
 
 	jwt "github.com/dgrijalva/jwt-go"
 
-	"github.com/ava-labs/avalanchego/utils/password"
+	"github.com/corpetty/avalanchego/utils/password"
 )
 
 var (

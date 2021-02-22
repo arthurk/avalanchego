@@ -7,9 +7,9 @@ import (
 	"errors"
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/utils/wrappers"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow/choices"
+	"github.com/corpetty/avalanchego/utils/wrappers"
 )
 
 func marshalID(idIntf interface{}) ([]byte, error) {

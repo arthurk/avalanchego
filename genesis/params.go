@@ -6,7 +6,7 @@ package genesis
 import (
 	"time"
 
-	"github.com/ava-labs/avalanchego/utils/constants"
+	"github.com/corpetty/avalanchego/utils/constants"
 )
 
 // Params ...

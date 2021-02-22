@@ -8,12 +8,12 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/ipcs/socket"
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/triggers"
-	"github.com/ava-labs/avalanchego/utils/logging"
-	"github.com/ava-labs/avalanchego/utils/wrappers"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/ipcs/socket"
+	"github.com/corpetty/avalanchego/snow"
+	"github.com/corpetty/avalanchego/snow/triggers"
+	"github.com/corpetty/avalanchego/utils/logging"
+	"github.com/corpetty/avalanchego/utils/wrappers"
 )
 
 // EventSockets is a set of named eventSockets

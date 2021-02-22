@@ -11,10 +11,10 @@ import (
 	"github.com/AppsFlyer/go-sundheit/checks"
 	"github.com/gorilla/rpc/v2"
 
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/json"
-	"github.com/ava-labs/avalanchego/utils/logging"
+	"github.com/corpetty/avalanchego/snow/engine/common"
+	"github.com/corpetty/avalanchego/utils/constants"
+	"github.com/corpetty/avalanchego/utils/json"
+	"github.com/corpetty/avalanchego/utils/logging"
 )
 
 // Health observes a set of vital signs and makes them available through an HTTP

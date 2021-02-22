@@ -7,13 +7,13 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ava-labs/avalanchego/api"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/utils/formatting"
-	"github.com/ava-labs/avalanchego/utils/rpc"
+	"github.com/corpetty/avalanchego/api"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow/choices"
+	"github.com/corpetty/avalanchego/utils/formatting"
+	"github.com/corpetty/avalanchego/utils/rpc"
 
-	cjson "github.com/ava-labs/avalanchego/utils/json"
+	cjson "github.com/corpetty/avalanchego/utils/json"
 )
 
 // Client ...

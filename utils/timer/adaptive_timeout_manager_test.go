@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/constants"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/utils/constants"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

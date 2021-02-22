@@ -7,8 +7,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/avalanchego/vms/rpcchainvm/messenger/messengerproto"
+	"github.com/corpetty/avalanchego/snow/engine/common"
+	"github.com/corpetty/avalanchego/vms/rpcchainvm/messenger/messengerproto"
 )
 
 var (

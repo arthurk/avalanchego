@@ -10,7 +10,7 @@ import (
 	"math/rand"
 	"testing"
 
-	safemath "github.com/ava-labs/avalanchego/utils/math"
+	safemath "github.com/corpetty/avalanchego/utils/math"
 )
 
 // BenchmarkAllWeightedSampling

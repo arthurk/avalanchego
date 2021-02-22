@@ -10,8 +10,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/ava-labs/avalanchego/utils/wrappers"
-	"github.com/ava-labs/avalanchego/vms/rpcchainvm/ghttp/gconn/gconnproto"
+	"github.com/corpetty/avalanchego/utils/wrappers"
+	"github.com/corpetty/avalanchego/vms/rpcchainvm/ghttp/gconn/gconnproto"
 )
 
 // Client is an implementation of a messenger channel that talks over RPC.

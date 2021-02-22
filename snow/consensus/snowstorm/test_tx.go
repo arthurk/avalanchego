@@ -4,8 +4,8 @@
 package snowstorm
 
 import (
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/choices"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow/choices"
 )
 
 // TestTx is a useful test tx

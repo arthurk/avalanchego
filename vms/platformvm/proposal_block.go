@@ -6,12 +6,12 @@ package platformvm
 import (
 	"fmt"
 
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/database/versiondb"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/snow/consensus/snowman"
-	"github.com/ava-labs/avalanchego/vms/components/core"
+	"github.com/corpetty/avalanchego/database"
+	"github.com/corpetty/avalanchego/database/versiondb"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow/choices"
+	"github.com/corpetty/avalanchego/snow/consensus/snowman"
+	"github.com/corpetty/avalanchego/vms/components/core"
 )
 
 // ProposalBlock is a proposal to change the chain's state.

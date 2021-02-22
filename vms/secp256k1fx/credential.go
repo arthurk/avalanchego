@@ -8,8 +8,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ava-labs/avalanchego/utils/crypto"
-	"github.com/ava-labs/avalanchego/utils/formatting"
+	"github.com/corpetty/avalanchego/utils/crypto"
+	"github.com/corpetty/avalanchego/utils/formatting"
 )
 
 var (

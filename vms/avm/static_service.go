@@ -10,16 +10,16 @@ import (
 	"math"
 	"net/http"
 
-	"github.com/ava-labs/avalanchego/codec"
-	"github.com/ava-labs/avalanchego/codec/linearcodec"
-	"github.com/ava-labs/avalanchego/codec/reflectcodec"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils/formatting"
-	"github.com/ava-labs/avalanchego/utils/wrappers"
-	"github.com/ava-labs/avalanchego/vms/components/avax"
-	"github.com/ava-labs/avalanchego/vms/secp256k1fx"
+	"github.com/corpetty/avalanchego/codec"
+	"github.com/corpetty/avalanchego/codec/linearcodec"
+	"github.com/corpetty/avalanchego/codec/reflectcodec"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/utils/formatting"
+	"github.com/corpetty/avalanchego/utils/wrappers"
+	"github.com/corpetty/avalanchego/vms/components/avax"
+	"github.com/corpetty/avalanchego/vms/secp256k1fx"
 
-	cjson "github.com/ava-labs/avalanchego/utils/json"
+	cjson "github.com/corpetty/avalanchego/utils/json"
 )
 
 var (

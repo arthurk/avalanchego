@@ -7,13 +7,13 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/database/versiondb"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/choices"
-	"github.com/ava-labs/avalanchego/snow/consensus/snowman"
-	"github.com/ava-labs/avalanchego/vms/components/core"
-	"github.com/ava-labs/avalanchego/vms/components/missing"
+	"github.com/corpetty/avalanchego/database"
+	"github.com/corpetty/avalanchego/database/versiondb"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow/choices"
+	"github.com/corpetty/avalanchego/snow/consensus/snowman"
+	"github.com/corpetty/avalanchego/vms/components/core"
+	"github.com/corpetty/avalanchego/vms/components/missing"
 )
 
 // When one stakes, one must specify the time one will start to validate and

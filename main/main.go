@@ -6,13 +6,13 @@ package main
 import (
 	"fmt"
 
-	"github.com/ava-labs/avalanchego/nat"
-	"github.com/ava-labs/avalanchego/node"
-	"github.com/ava-labs/avalanchego/utils"
-	"github.com/ava-labs/avalanchego/utils/constants"
-	"github.com/ava-labs/avalanchego/utils/crypto"
-	"github.com/ava-labs/avalanchego/utils/dynamicip"
-	"github.com/ava-labs/avalanchego/utils/logging"
+	"github.com/corpetty/avalanchego/nat"
+	"github.com/corpetty/avalanchego/node"
+	"github.com/corpetty/avalanchego/utils"
+	"github.com/corpetty/avalanchego/utils/constants"
+	"github.com/corpetty/avalanchego/utils/crypto"
+	"github.com/corpetty/avalanchego/utils/dynamicip"
+	"github.com/corpetty/avalanchego/utils/logging"
 )
 
 const (

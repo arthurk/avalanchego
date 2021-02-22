@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/vms/components/avax"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/vms/components/avax"
 )
 
 // UTXOSet ...

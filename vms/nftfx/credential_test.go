@@ -3,7 +3,7 @@ package nftfx
 import (
 	"testing"
 
-	"github.com/ava-labs/avalanchego/vms/components/verify"
+	"github.com/corpetty/avalanchego/vms/components/verify"
 )
 
 func TestCredentialState(t *testing.T) {

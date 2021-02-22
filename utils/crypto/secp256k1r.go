@@ -14,10 +14,10 @@ import (
 
 	secp256k1 "github.com/decred/dcrd/dcrec/secp256k1/v3"
 
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils"
-	"github.com/ava-labs/avalanchego/utils/hashing"
+	"github.com/corpetty/avalanchego/cache"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/utils"
+	"github.com/corpetty/avalanchego/utils/hashing"
 )
 
 const (

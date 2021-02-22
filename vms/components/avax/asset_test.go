@@ -6,9 +6,9 @@ package avax
 import (
 	"testing"
 
-	"github.com/ava-labs/avalanchego/codec"
-	"github.com/ava-labs/avalanchego/codec/linearcodec"
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/corpetty/avalanchego/codec"
+	"github.com/corpetty/avalanchego/codec/linearcodec"
+	"github.com/corpetty/avalanchego/ids"
 )
 
 func TestAssetVerifyNil(t *testing.T) {

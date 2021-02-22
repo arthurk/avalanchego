@@ -7,16 +7,16 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/ava-labs/avalanchego/chains/atomic"
-	"github.com/ava-labs/avalanchego/database/memdb"
-	"github.com/ava-labs/avalanchego/database/prefixdb"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/avalanchego/utils/crypto"
-	"github.com/ava-labs/avalanchego/utils/logging"
-	"github.com/ava-labs/avalanchego/vms/components/avax"
-	"github.com/ava-labs/avalanchego/vms/components/verify"
-	"github.com/ava-labs/avalanchego/vms/secp256k1fx"
+	"github.com/corpetty/avalanchego/chains/atomic"
+	"github.com/corpetty/avalanchego/database/memdb"
+	"github.com/corpetty/avalanchego/database/prefixdb"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow/engine/common"
+	"github.com/corpetty/avalanchego/utils/crypto"
+	"github.com/corpetty/avalanchego/utils/logging"
+	"github.com/corpetty/avalanchego/vms/components/avax"
+	"github.com/corpetty/avalanchego/vms/components/verify"
+	"github.com/corpetty/avalanchego/vms/secp256k1fx"
 )
 
 func TestImportTxSyntacticVerify(t *testing.T) {

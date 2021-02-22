@@ -6,11 +6,11 @@ package avm
 import (
 	"testing"
 
-	"github.com/ava-labs/avalanchego/codec"
-	"github.com/ava-labs/avalanchego/codec/linearcodec"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/vms/components/avax"
-	"github.com/ava-labs/avalanchego/vms/components/verify"
+	"github.com/corpetty/avalanchego/codec"
+	"github.com/corpetty/avalanchego/codec/linearcodec"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/vms/components/avax"
+	"github.com/corpetty/avalanchego/vms/components/verify"
 )
 
 type testOperable struct {

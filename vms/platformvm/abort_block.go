@@ -6,8 +6,8 @@ package platformvm
 import (
 	"fmt"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/vms/components/core"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/vms/components/core"
 )
 
 // Abort being accepted results in the proposal of its parent (which must be a proposal block)

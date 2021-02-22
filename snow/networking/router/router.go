@@ -6,9 +6,9 @@ package router
 import (
 	"time"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/networking/timeout"
-	"github.com/ava-labs/avalanchego/utils/logging"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow/networking/timeout"
+	"github.com/corpetty/avalanchego/utils/logging"
 )
 
 // Router routes consensus messages to the Handler of the consensus

@@ -11,22 +11,22 @@ import (
 
 	"github.com/gorilla/rpc/v2"
 
-	"github.com/ava-labs/avalanchego/api"
-	"github.com/ava-labs/avalanchego/chains/atomic"
-	"github.com/ava-labs/avalanchego/codec"
-	"github.com/ava-labs/avalanchego/codec/linearcodec"
-	"github.com/ava-labs/avalanchego/codec/reflectcodec"
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/database/encdb"
-	"github.com/ava-labs/avalanchego/database/memdb"
-	"github.com/ava-labs/avalanchego/database/prefixdb"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/avalanchego/utils/formatting"
-	"github.com/ava-labs/avalanchego/utils/logging"
-	"github.com/ava-labs/avalanchego/utils/password"
+	"github.com/corpetty/avalanchego/api"
+	"github.com/corpetty/avalanchego/chains/atomic"
+	"github.com/corpetty/avalanchego/codec"
+	"github.com/corpetty/avalanchego/codec/linearcodec"
+	"github.com/corpetty/avalanchego/codec/reflectcodec"
+	"github.com/corpetty/avalanchego/database"
+	"github.com/corpetty/avalanchego/database/encdb"
+	"github.com/corpetty/avalanchego/database/memdb"
+	"github.com/corpetty/avalanchego/database/prefixdb"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow/engine/common"
+	"github.com/corpetty/avalanchego/utils/formatting"
+	"github.com/corpetty/avalanchego/utils/logging"
+	"github.com/corpetty/avalanchego/utils/password"
 
-	jsoncodec "github.com/ava-labs/avalanchego/utils/json"
+	jsoncodec "github.com/corpetty/avalanchego/utils/json"
 )
 
 const (

@@ -3,7 +3,7 @@ package vertex
 import (
 	"testing"
 
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/corpetty/avalanchego/ids"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -6,9 +6,9 @@ package avm
 import (
 	"errors"
 
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/vms/components/avax"
+	"github.com/corpetty/avalanchego/cache"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/vms/components/avax"
 )
 
 var (

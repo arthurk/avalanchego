@@ -7,10 +7,10 @@ import (
 
 	"github.com/gorilla/rpc/v2"
 
-	"github.com/ava-labs/avalanchego/snow/engine/common"
-	"github.com/ava-labs/avalanchego/utils/logging"
+	"github.com/corpetty/avalanchego/snow/engine/common"
+	"github.com/corpetty/avalanchego/utils/logging"
 
-	cjson "github.com/ava-labs/avalanchego/utils/json"
+	cjson "github.com/corpetty/avalanchego/utils/json"
 )
 
 const (

@@ -8,8 +8,8 @@ import (
 	"errors"
 	"sort"
 
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/utils"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/utils"
 )
 
 var (

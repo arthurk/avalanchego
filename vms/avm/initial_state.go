@@ -8,9 +8,9 @@ import (
 	"errors"
 	"sort"
 
-	"github.com/ava-labs/avalanchego/codec"
-	"github.com/ava-labs/avalanchego/utils"
-	"github.com/ava-labs/avalanchego/vms/components/verify"
+	"github.com/corpetty/avalanchego/codec"
+	"github.com/corpetty/avalanchego/utils"
+	"github.com/corpetty/avalanchego/vms/components/verify"
 )
 
 var (

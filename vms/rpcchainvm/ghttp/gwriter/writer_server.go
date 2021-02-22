@@ -7,7 +7,7 @@ import (
 	"context"
 	"io"
 
-	"github.com/ava-labs/avalanchego/vms/rpcchainvm/ghttp/gwriter/gwriterproto"
+	"github.com/corpetty/avalanchego/vms/rpcchainvm/ghttp/gwriter/gwriterproto"
 )
 
 // Server is a http.Handler that is managed over RPC.

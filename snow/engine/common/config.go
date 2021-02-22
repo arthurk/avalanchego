@@ -4,8 +4,8 @@
 package common
 
 import (
-	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/validators"
+	"github.com/corpetty/avalanchego/snow"
+	"github.com/corpetty/avalanchego/snow/validators"
 )
 
 // Config wraps the common configurations that are needed by a Snow consensus

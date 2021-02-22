@@ -6,7 +6,7 @@ package mockdb
 import (
 	"errors"
 
-	"github.com/ava-labs/avalanchego/database"
+	"github.com/corpetty/avalanchego/database"
 )
 
 var errNoFunction = errors.New("user didn't specify what value(s) return")

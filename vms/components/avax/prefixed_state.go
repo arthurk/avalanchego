@@ -7,12 +7,12 @@ import (
 	"bytes"
 	"errors"
 
-	"github.com/ava-labs/avalanchego/cache"
-	"github.com/ava-labs/avalanchego/codec"
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/database/prefixdb"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/snow/choices"
+	"github.com/corpetty/avalanchego/cache"
+	"github.com/corpetty/avalanchego/codec"
+	"github.com/corpetty/avalanchego/database"
+	"github.com/corpetty/avalanchego/database/prefixdb"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/snow/choices"
 )
 
 const (

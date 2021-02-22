@@ -8,11 +8,11 @@ import (
 
 	"golang.org/x/net/context"
 
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/database/nodb"
-	"github.com/ava-labs/avalanchego/database/rpcdb/rpcdbproto"
-	"github.com/ava-labs/avalanchego/utils"
-	"github.com/ava-labs/avalanchego/utils/wrappers"
+	"github.com/corpetty/avalanchego/database"
+	"github.com/corpetty/avalanchego/database/nodb"
+	"github.com/corpetty/avalanchego/database/rpcdb/rpcdbproto"
+	"github.com/corpetty/avalanchego/utils"
+	"github.com/corpetty/avalanchego/utils/wrappers"
 )
 
 var (

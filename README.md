@@ -18,8 +18,8 @@ Avalanche is an incredibly lightweight protocol, so the minimum computer require
 Clone the AvalancheGo repository:
 
 ```sh
-go get -v -d github.com/ava-labs/avalanchego/...
-cd $GOPATH/src/github.com/ava-labs/avalanchego
+go get -v -d github.com/corpetty/avalanchego/...
+cd $GOPATH/src/github.com/corpetty/avalanchego
 ```
 
 #### Building the Avalanche Executable

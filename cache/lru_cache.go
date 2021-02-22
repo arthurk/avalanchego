@@ -7,7 +7,7 @@ import (
 	"container/list"
 	"sync"
 
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/corpetty/avalanchego/ids"
 )
 
 const (

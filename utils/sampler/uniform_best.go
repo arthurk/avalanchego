@@ -9,7 +9,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/ava-labs/avalanchego/utils/timer"
+	"github.com/corpetty/avalanchego/utils/timer"
 )
 
 var (

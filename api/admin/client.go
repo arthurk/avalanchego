@@ -6,8 +6,8 @@ package admin
 import (
 	"time"
 
-	"github.com/ava-labs/avalanchego/api"
-	"github.com/ava-labs/avalanchego/utils/rpc"
+	"github.com/corpetty/avalanchego/api"
+	"github.com/corpetty/avalanchego/utils/rpc"
 )
 
 // Client for the Avalanche Platform Info API Endpoint

@@ -13,8 +13,8 @@ import (
 	jwt "github.com/dgrijalva/jwt-go"
 	rpc "github.com/gorilla/rpc/v2/json2"
 
-	"github.com/ava-labs/avalanchego/utils/password"
-	"github.com/ava-labs/avalanchego/utils/timer"
+	"github.com/corpetty/avalanchego/utils/password"
+	"github.com/corpetty/avalanchego/utils/timer"
 )
 
 const (

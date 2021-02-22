@@ -7,7 +7,7 @@ RUN mkdir -p /go/src/github.com/ava-labs
 WORKDIR $GOPATH/src/github.com/ava-labs/
 COPY . avalanchego
 
-WORKDIR $GOPATH/src/github.com/ava-labs/avalanchego
+WORKDIR $GOPATH/src/github.com/corpetty/avalanchego
 RUN ./scripts/build.sh
 
-RUN ln -sv $GOPATH/src/github.com/ava-labs/avalanchego/ /avalanchego
+RUN ln -sv $GOPATH/src/github.com/corpetty/avalanchego/ /avalanchego

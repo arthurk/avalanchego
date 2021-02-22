@@ -4,8 +4,8 @@
 package common
 
 import (
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/snow"
+	"github.com/corpetty/avalanchego/database"
+	"github.com/corpetty/avalanchego/snow"
 )
 
 // VM describes the interface that all consensus VMs must implement

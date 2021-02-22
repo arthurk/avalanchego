@@ -6,10 +6,10 @@ package gsharedmemory
 import (
 	"context"
 
-	"github.com/ava-labs/avalanchego/chains/atomic"
-	"github.com/ava-labs/avalanchego/database"
-	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/avalanchego/vms/rpcchainvm/gsharedmemory/gsharedmemoryproto"
+	"github.com/corpetty/avalanchego/chains/atomic"
+	"github.com/corpetty/avalanchego/database"
+	"github.com/corpetty/avalanchego/ids"
+	"github.com/corpetty/avalanchego/vms/rpcchainvm/gsharedmemory/gsharedmemoryproto"
 )
 
 // Server is a messenger that is managed over RPC.

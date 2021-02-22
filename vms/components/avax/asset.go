@@ -6,7 +6,7 @@ package avax
 import (
 	"errors"
 
-	"github.com/ava-labs/avalanchego/ids"
+	"github.com/corpetty/avalanchego/ids"
 )
 
 var (
