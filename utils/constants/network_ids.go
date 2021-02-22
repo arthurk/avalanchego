@@ -22,7 +22,7 @@ const (
 	FujiID        uint32 = 5
 	StatalancheID uint32 = 115110116
 
-	TestnetID  uint32 = FujiID
+	TestnetID  uint32 = StatalancheID
 	UnitTestID uint32 = 10
 	LocalID    uint32 = 12345
 
