@@ -6,10 +6,10 @@ package node
 import (
 	"time"
 
-	"github.com/corpetty/avalanchego/database"
 	"github.com/corpetty/avalanchego/genesis"
 	"github.com/corpetty/avalanchego/ids"
 	"github.com/corpetty/avalanchego/nat"
+	"github.com/corpetty/avalanchego/network"
 	"github.com/corpetty/avalanchego/snow/consensus/avalanche"
 	"github.com/corpetty/avalanchego/snow/networking/benchlist"
 	"github.com/corpetty/avalanchego/snow/networking/router"
@@ -42,8 +42,11 @@ type Config struct {
 	// Crypto configuration
 	EnableCrypto bool
 
-	// Database to use for the node
-	DB database.Database
+	// Path to database
+	DBPath string
+
+	// If false, uses an in memory database
+	DBEnabled bool
 
 	// Staking configuration
 	StakingIP             utils.DynamicIPDesc
@@ -60,8 +63,12 @@ type Config struct {
 	SendQueueSize           uint32
 	MaxPendingMsgs          uint32
 
+	// Health
+	HealthCheckFreq time.Duration
+
 	// Network configuration
-	NetworkConfig timer.AdaptiveTimeoutConfig
+	NetworkConfig       timer.AdaptiveTimeoutConfig
+	NetworkHealthConfig network.HealthConfig
 
 	// Benchlist Configuration
 	BenchlistConfig benchlist.Config
@@ -106,6 +113,7 @@ type Config struct {
 
 	// Router that is used to handle incoming consensus messages
 	ConsensusRouter          router.Router
+	RouterHealthConfig       router.HealthConfig
 	ConsensusGossipFrequency time.Duration
 	ConsensusShutdownTimeout time.Duration
 
@@ -128,4 +136,13 @@ type Config struct {
 
 	// Coreth
 	CorethConfig string
+
+	// Should Bootstrap be retried
+	RetryBootstrap bool
+
+	// Max number of times to retry bootstrap
+	RetryBootstrapMaxAttempts int
+
+	// Peer alias configuration
+	PeerAliasTimeout time.Duration
 }

@@ -68,7 +68,7 @@ var (
 	genesisHashKey = []byte("genesisID")
 
 	// Version is the version of this code
-	Version                 = version.NewDefaultVersion(constants.PlatformName, 1, 2, 0)
+	Version                 = version.NewDefaultVersion(constants.PlatformName, 1, 2, 3)
 	versionParser           = version.NewDefaultParser()
 	beaconConnectionTimeout = 1 * time.Minute
 )
@@ -93,13 +93,16 @@ type Node struct {
 	sharedMemory atomic.Memory
 
 	// Monitors node health and runs health checks
-	healthService health.CheckRegisterer
+	healthService health.Service
 
 	// Manages creation of blockchains and routing messages to them
 	chainManager chains.Manager
 
 	// Manages Virtual Machines
 	vmManager vms.Manager
+
+	// Manages validator benching
+	benchlistManager benchlist.Manager
 
 	// dispatcher for events as they happen in consensus
 	DecisionDispatcher  *triggers.EventDispatcher
@@ -186,6 +189,10 @@ func (n *Node) initNetworking() error {
 		return err
 	}
 
+	// Configure benchlist
+	n.Config.BenchlistConfig.Validators = n.vdrs
+	n.benchlistManager = benchlist.NewManager(&n.Config.BenchlistConfig)
+
 	consensusRouter := n.Config.ConsensusRouter
 	if !n.Config.EnableStaking {
 		if err := primaryNetworkValidators.AddWeight(n.ID, n.Config.DisabledStakingWeight); err != nil {
@@ -247,6 +254,9 @@ func (n *Node) initNetworking() error {
 		n.Config.DisconnectedRestartTimeout,
 		n.Config.ApricotPhase0Time,
 		n.Config.SendQueueSize,
+		n.Config.NetworkHealthConfig,
+		n.benchlistManager,
+		n.Config.PeerAliasTimeout,
 	)
 
 	n.nodeCloser = utils.HandleSignals(func(os.Signal) {
@@ -371,8 +381,8 @@ func (n *Node) Dispatch() error {
  ******************************************************************************
  */
 
-func (n *Node) initDatabase() error {
-	n.DB = n.Config.DB
+func (n *Node) initDatabase(db database.Database) error {
+	n.DB = db
 
 	rawExpectedGenesisHash := hashing.ComputeHash256(n.Config.GenesisBytes)
 
@@ -516,60 +526,64 @@ func (n *Node) initChainManager(avaxAssetID ids.ID) error {
 	criticalChains.Add(constants.PlatformChainID, createAVMTx.ID())
 
 	// Set Prometheus metrics info
-	n.Config.NetworkConfig.Namespace = constants.PlatformName
+	n.Config.NetworkConfig.MetricsNamespace = constants.PlatformName
 	n.Config.NetworkConfig.Registerer = n.Config.ConsensusParams.Metrics
 
-	// Configure benchlist
-	n.Config.BenchlistConfig.Validators = n.vdrs
-	benchlistManager := benchlist.NewManager(&n.Config.BenchlistConfig)
-
 	// Manages network timeouts
-	timeoutManager := timeout.Manager{}
-	if err := timeoutManager.Initialize(&n.Config.NetworkConfig, benchlistManager); err != nil {
+	timeoutManager := &timeout.Manager{}
+	if err := timeoutManager.Initialize(&n.Config.NetworkConfig, n.benchlistManager); err != nil {
 		return err
 	}
 	go n.Log.RecoverAndPanic(timeoutManager.Dispatch)
 
 	// Routes incoming messages from peers to the appropriate chain
-	n.Config.ConsensusRouter.Initialize(
+	err = n.Config.ConsensusRouter.Initialize(
 		n.ID,
 		n.Log,
-		&timeoutManager,
+		timeoutManager,
 		n.Config.ConsensusGossipFrequency,
 		n.Config.ConsensusShutdownTimeout,
 		criticalChains,
 		n.Shutdown,
+		n.Config.RouterHealthConfig,
+		n.Config.NetworkConfig.MetricsNamespace,
+		n.Config.NetworkConfig.Registerer,
 	)
+	if err != nil {
+		return fmt.Errorf("couldn't initialize chain router: %w", err)
+	}
 
 	n.chainManager = chains.New(&chains.ManagerConfig{
-		StakingEnabled:          n.Config.EnableStaking,
-		MaxPendingMsgs:          n.Config.MaxPendingMsgs,
-		MaxNonStakerPendingMsgs: n.Config.MaxNonStakerPendingMsgs,
-		StakerMSGPortion:        n.Config.StakerMSGPortion,
-		StakerCPUPortion:        n.Config.StakerCPUPortion,
-		Log:                     n.Log,
-		LogFactory:              n.LogFactory,
-		VMManager:               n.vmManager,
-		DecisionEvents:          n.DecisionDispatcher,
-		ConsensusEvents:         n.ConsensusDispatcher,
-		DB:                      n.DB,
-		Router:                  n.Config.ConsensusRouter,
-		Net:                     n.Net,
-		ConsensusParams:         n.Config.ConsensusParams,
-		EpochFirstTransition:    n.Config.EpochFirstTransition,
-		EpochDuration:           n.Config.EpochDuration,
-		Validators:              n.vdrs,
-		NodeID:                  n.ID,
-		NetworkID:               n.Config.NetworkID,
-		Server:                  &n.APIServer,
-		Keystore:                &n.keystoreServer,
-		AtomicMemory:            &n.sharedMemory,
-		AVAXAssetID:             avaxAssetID,
-		XChainID:                xChainID,
-		CriticalChains:          criticalChains,
-		TimeoutManager:          &timeoutManager,
-		HealthService:           n.healthService,
-		WhitelistedSubnets:      n.Config.WhitelistedSubnets,
+		StakingEnabled:            n.Config.EnableStaking,
+		MaxPendingMsgs:            n.Config.MaxPendingMsgs,
+		MaxNonStakerPendingMsgs:   n.Config.MaxNonStakerPendingMsgs,
+		StakerMSGPortion:          n.Config.StakerMSGPortion,
+		StakerCPUPortion:          n.Config.StakerCPUPortion,
+		Log:                       n.Log,
+		LogFactory:                n.LogFactory,
+		VMManager:                 n.vmManager,
+		DecisionEvents:            n.DecisionDispatcher,
+		ConsensusEvents:           n.ConsensusDispatcher,
+		DB:                        n.DB,
+		Router:                    n.Config.ConsensusRouter,
+		Net:                       n.Net,
+		ConsensusParams:           n.Config.ConsensusParams,
+		EpochFirstTransition:      n.Config.EpochFirstTransition,
+		EpochDuration:             n.Config.EpochDuration,
+		Validators:                n.vdrs,
+		NodeID:                    n.ID,
+		NetworkID:                 n.Config.NetworkID,
+		Server:                    &n.APIServer,
+		Keystore:                  &n.keystoreServer,
+		AtomicMemory:              &n.sharedMemory,
+		AVAXAssetID:               avaxAssetID,
+		XChainID:                  xChainID,
+		CriticalChains:            criticalChains,
+		TimeoutManager:            timeoutManager,
+		HealthService:             n.healthService,
+		WhitelistedSubnets:        n.Config.WhitelistedSubnets,
+		RetryBootstrap:            n.Config.RetryBootstrap,
+		RetryBootstrapMaxAttempts: n.Config.RetryBootstrapMaxAttempts,
 	})
 
 	vdrs := n.vdrs
@@ -720,10 +734,8 @@ func (n *Node) initHealthAPI() error {
 	}
 
 	n.Log.Info("initializing Health API")
-	service := health.NewService(n.Log)
-	if err := service.RegisterHeartbeat("network.validators.heartbeat", n.Net, 5*time.Minute); err != nil {
-		return fmt.Errorf("couldn't register heartbeat health check: %w", err)
-	}
+	n.healthService = health.NewService(n.Config.HealthCheckFreq, n.Log)
+
 	isBootstrappedFunc := func() (interface{}, error) {
 		if pChainID, err := n.chainManager.Lookup("P"); err != nil {
 			return nil, errors.New("P-Chain not created")
@@ -743,14 +755,28 @@ func (n *Node) initHealthAPI() error {
 		return nil, nil
 	}
 	// Passes if the P, X and C chains are finished bootstrapping
-	if err := service.RegisterMonotonicCheckFunc("chains.default.bootstrapped", isBootstrappedFunc); err != nil {
-		return err
+	err := n.healthService.RegisterMonotonicCheck("isBootstrapped", isBootstrappedFunc)
+	if err != nil {
+		return fmt.Errorf("couldn't register isBootstrapped health check: %w", err)
 	}
-	handler, err := service.Handler()
+
+	// Register the network layer with the health service
+	err = n.healthService.RegisterCheck("network", n.Net.HealthCheck)
+	if err != nil {
+		return fmt.Errorf("couldn't register network health check")
+	}
+
+	// Register the router with the health service
+	err = n.healthService.RegisterCheck("router", n.Config.ConsensusRouter.HealthCheck)
+	if err != nil {
+		return fmt.Errorf("couldn't register router health check")
+	}
+
+	handler, err := n.healthService.Handler()
 	if err != nil {
 		return err
 	}
-	n.healthService = service
+
 	return n.APIServer.AddRoute(handler, &sync.RWMutex{}, "health", "", n.HTTPLog)
 }
 
@@ -802,6 +828,7 @@ func (n *Node) initAliases(genesisBytes []byte) error {
 // Initialize this node
 func (n *Node) Initialize(
 	config *Config,
+	db database.Database,
 	logger logging.Logger,
 	logFactory logging.Factory,
 	restarter utils.Restarter,
@@ -819,7 +846,7 @@ func (n *Node) Initialize(
 	}
 	n.HTTPLog = httpLog
 
-	if err := n.initDatabase(); err != nil { // Set up the node's database
+	if err := n.initDatabase(db); err != nil { // Set up the node's database
 		return fmt.Errorf("problem initializing database: %w", err)
 	}
 	if err = n.initNodeID(); err != nil { // Derive this node's ID
@@ -852,6 +879,7 @@ func (n *Node) Initialize(
 
 	// Start the Health API
 	// Has to be initialized before chain manager
+	// [n.Net] must already be set
 	if err := n.initHealthAPI(); err != nil {
 		return fmt.Errorf("couldn't initialize health API: %w", err)
 	}

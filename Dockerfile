@@ -2,9 +2,9 @@
 
 FROM golang:1.15.5-buster
 
-RUN mkdir -p /go/src/github.com/ava-labs
+RUN mkdir -p /go/src/github.com/corpetty
 
-WORKDIR $GOPATH/src/github.com/ava-labs/
+WORKDIR $GOPATH/src/github.com/corpetty/
 COPY . avalanchego
 
 WORKDIR $GOPATH/src/github.com/corpetty/avalanchego
