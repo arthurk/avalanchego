@@ -7,7 +7,7 @@ set -o pipefail
 # Build image from current local source
 SRC_DIR="$(dirname "${BASH_SOURCE[0]}")"
 AVALANCHE_PATH=$( cd "$( dirname "${BASH_SOURCE[0]}" )"; cd .. && pwd ) # Directory above this script
-DOCKERHUB_REPO="avaplatform/avalanchego"
+DOCKERHUB_REPO="arthurk/avalanchego"
 
 # WARNING: this will use the most recent commit even if there are un-committed changes present
 FULL_COMMIT_HASH="$(git --git-dir="$AVALANCHE_PATH/.git" rev-parse HEAD)"
